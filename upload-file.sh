@@ -8,3 +8,5 @@ curl -i -v -k \
 	-F filename=$file \
 	-F upload=@$file \
 	http://$host:$port/api/v1/frame-upload
+
+sleep 2

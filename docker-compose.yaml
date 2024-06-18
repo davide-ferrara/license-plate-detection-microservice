@@ -1,0 +1,25 @@
+services:
+  api-gateway-service:
+    container_name: api-gateway-service
+    build: ./api-gateway-service
+    image: api-gateway-service
+    command: python3 main.py -c config.yaml -v
+    volumes:
+      - ./api-gateway-service/app:/opt/app
+      - ./shared:/opt/app/static-files
+    ports:
+      - '8080:8080'
+
+  recognition-service:
+    container_name: recognition-service
+    build: ./recognition-service
+    image: recognition-service
+    command: python3 main.py -c config.yaml -v
+    volumes:
+      - ./recognition-service/app:/opt/app
+      - ./shared:/opt/app/static-files
+      - ./shared/results:/opt/app/shared
+
+networks:
+  default:
+    driver: bridge

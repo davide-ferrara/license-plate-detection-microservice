@@ -1,4 +1,8 @@
-docker run -d --name platedetection \
-    -v /var/log/platedetection:/opt/app/log \
-    -v ~/static-files:/opt/app/static-files \
-    lcarnevale/platedetection
+echo '*** Build for Virtualization Project ***'
+
+echo 'Cleaning up folders...'
+chmod +x clean.sh
+./clean.sh
+
+echo 'Starting containters...'
+docker compose up -d --build

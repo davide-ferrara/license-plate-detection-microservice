@@ -9,13 +9,7 @@ This repository forks the [Automatic_Number_Plate_Recognition_YOLO_OCR
 
 ## How to build
 
-Build the image using the Docker command.
-
-```bash
-docker build -t lcarnevale/platedetection .
-```
-
-Alternativelly, use the _build.sh_ script.
+Build the image using the a bash script.
 
 ```bash
 chmod +x build.sh
@@ -27,25 +21,13 @@ chmod +x build.sh
 Run the image as following.
 
 ```bash
-docker run -d --name platedetection \
-    -v /var/log/platedetection:/opt/app/log \
-    -v ~/static-files:/opt/app/static-files \
-    lcarnevale/platedetection
-```
-
-Alternativelly, use the _run.sh_ script.
-
-```bash
 chmod +x run.sh
 ./run.sh
 ```
 
-## How to read the logs
-
-The filename is custom and it can be modified in the configuration file.
+## Run a stress test
 
 ```bash
-tail -f /var/log/lcarnevale/license-plate-detection.log
+chmod +x run.sh
+./stress.sh
 ```
-
-# test
