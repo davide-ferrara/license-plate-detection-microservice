@@ -29,5 +29,5 @@ chmod +x run.sh
 
 ```bash
 chmod +x run.sh
-./stress.sh
+./stress.sh dataset localhost 8080
 ```
