@@ -31,3 +31,4 @@ chmod +x run.sh
 chmod +x run.sh
 ./stress.sh dataset localhost 8080
 ```
+![sample](https://github.com/davide-ferrara/license-plate-detection-microservice/assets/78814851/e8adf0a9-0772-43bd-bec0-22e08e4be25d)
